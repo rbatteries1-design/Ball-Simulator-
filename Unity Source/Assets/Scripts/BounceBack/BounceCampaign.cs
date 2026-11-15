@@ -7,7 +7,7 @@ namespace BounceBack
     [RequireComponent(typeof(BallMotor))]
     public sealed class BounceCampaign : MonoBehaviour
     {
-        [SerializeField, Range(1, 3)] private int level = 1;
+        [SerializeField, Range(1, 5)] private int level = 1;
         private const string Key = "BounceBack.Shop.";
         private static readonly string[] TrailNames =
             { "Rust", "Ash", "Sparks", "Acid", "Ice", "Arc", "Ink", "Embers" };
@@ -59,7 +59,7 @@ namespace BounceBack
         private IEnumerator Advance(float delay)
         {
             yield return new WaitForSecondsRealtime(Mathf.Max(.75f, delay));
-            if (level < 3)
+            if (level < 4)
                 SceneManager.LoadScene("Bounce Back Level " + (level + 1));
             else
             {
