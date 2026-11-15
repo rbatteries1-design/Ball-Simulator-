@@ -1,9 +1,10 @@
-# Ball Simulator 3 source
+# Ball Simulator 3
 
-Download the whole repository or clone it. Keep all source parts next to
-Restore-Project.ps1. From PowerShell in this folder, run:
+Open this project in Unity 2021.3.16f1. Start in Assets/Scenes/Bounce Back Level 1.unity. WASD steers and right mouse drag orbits. The Race Course button opens the multiplayer course. Start a room or join using the host code.
 
-    powershell -NoProfile -ExecutionPolicy Bypass -File .\Restore-Project.ps1
+Put shared materials and particle prefabs in Resources/BounceBack/Shop Catalog. Race clients need the same catalog to show the same cosmetics.
 
-Open the restored Ball Simulator 3 folder with Unity 2021.3.16f1. Its README
-covers controls, multiplayer, and project setup.
+The project team confirmed redistribution clearance for the included assets.
+
+The Server folder includes the Flask race API and its dependencies. The client
+uses the existing PythonAnywhere endpoint, configured in OnlineSession.cs.
